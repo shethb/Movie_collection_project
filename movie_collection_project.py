@@ -5,20 +5,11 @@ movies.append({'Name': 'titanic', 'Year' : '2009', 'Genre': 'drama'})
 movies.append({'Name': 'Andhadhun', 'Year' : '2018', 'Genre': 'crime'})
 
 def find_movie():
-    choice = input("\nPlease type 'name' to find by name/ 'year' to find by year/ 'genre' to find by genre\nHow do you want to find your movie:")
-    if choice == "name":
-        cs = input("\nPlease type the name of movie: ")
-        m = list(filter(lambda movie: movie['Name'] == cs, movies))
-    elif choice == "year":
-        cs = input("\nPlease type the year of movie: ")
-        m = list(filter(lambda movie: movie['Year'] == cs, movies))
-    elif choice == "genre":
-        cs = input("\nPlease type the genre of movie: ")
-        m = list(filter(lambda movie: movie['Genre'] == cs, movies))
-    else:
-        print("\nPlease try again!")
-    for mo in m:
-        print(f"\nMovie Name : {mo['Name']}", f"  Movie Year : {mo['Year']}", f"  Movie Genre : {mo['Genre']}")
+    choice = input("Please type 'name' to find by name/ 'year' to find by year/ 'genre' to find by genre\nHow do you want to find your movie:")
+        cs = input("\nWhat are you looking for?  ")
+        m = list(filter(lambda movie: movie[choice] == cs, movies))
+        for mo in m:
+            print(f"\nMovie Name : {mo['name']}", f"  Movie Year : {mo['year']}", f"  Movie Genre : {mo['genre']}")
 
 def add_movie():
     movies.append({'Name': input("Please input name:"), 'Year': input("Please input year:"), 'Genre': input("Please input genre:")})
