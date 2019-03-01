@@ -1,5 +1,5 @@
 # Movie_collection_project
-In this project the Idea was to do following things create a movie storage application, that will allow users to manage their movie collection
+In this project the Idea was to do following things: Create a movie storage application, that will allow users to manage their movie collection
 and find any movie they want.
 Here’s the three main features:
 >>First, the application must allow to add new movies to the collection;
